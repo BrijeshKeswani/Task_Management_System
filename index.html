@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>TaskY</title>
 </head>
-<body>
+<body onload="loadInitialCardData()">
   <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -57,8 +57,8 @@
           <textarea
           rows="6" 
            class="form-control" id="Taskdescription" 
-          aria-describedby="Task type" 
-          placeholder="Describe your task in detail" >
+          aria-describedby="Task Description" 
+          placeholder="Describe your task in detail">
             </textarea>
         </div>
         
@@ -66,7 +66,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="saveChanges()">Save changes</button>
+        <button type="button" class="btn btn-primary" onclick="saveChanges()" data-bs-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
@@ -101,27 +101,7 @@
          </div>
 <!-- cards  -->
 <div class="row task__container">
-  <div class="col-md-6 col-lg-4">
-    <div class="card text-center">
-      <div class="card-header d-flex justify-content-end gap-2">
-        <button type="button" class="btn btn-outline-success"><i class="fas fa-pencil-alt"></i>
-        </button>
-<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>
-</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGVudHJlcHJlbmV1cnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" class="card-img-top" alt="...">
-
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-      <div class="card-footer text-muted">
-        <button type="button" class="btn btn-outline-primary float-end">Open Task</button>
-      </div>
-     </div>  
-   </div>
- </div>
+  
 </div>
 
 <!-- bootstrap javascript -->
